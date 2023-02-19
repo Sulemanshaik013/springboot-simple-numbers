@@ -36,7 +36,7 @@ public interface NumberService {
 
 	public String circularPrimeOrNot(long number);
 
-	public String divisabilityOfNumber(long number);
+	public String divisabilityOfNumber(long number,int divider);
 
 	public String primesSmallerThanNumber(long number);
 
@@ -46,8 +46,8 @@ public interface NumberService {
 
 	public String LCM(int a, int b);
 
-	public String apSequence(int n);
+	public String apSequence(int a,int d,int n);
 
-	public String gpSequence(int n);
+	public String gpSequence(int a,int r,int n);
 
 }

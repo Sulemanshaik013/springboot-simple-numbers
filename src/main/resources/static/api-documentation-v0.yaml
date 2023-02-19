@@ -1,0 +1,514 @@
+openapi: 3.0.1
+info:
+  title:  Simple Numbers
+  version: v0
+  description: performs simple operations on numbers
+servers:
+  - url: http://localhost:8097/
+    description: Generated server url
+paths:
+  /v1/numbers/sumoffirstnnnumbers:
+    get:
+      tags:
+        - number-controller
+      operationId: getSumOfFirstNNumbers
+      parameters:
+        - name: 'n'
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/sumofdigits:
+    get:
+      tags:
+        - number-controller
+      operationId: getSumOfDigits
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/smallestdigit:
+    get:
+      tags:
+        - number-controller
+      operationId: getSmallestDigit
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/secondsmallestdigit:
+    get:
+      tags:
+        - number-controller
+      operationId: getSecondSmallestDigit
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/secondlargestdigit:
+    get:
+      tags:
+        - number-controller
+      operationId: getSecondLargestDigit
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/rotatedigits:
+    get:
+      tags:
+        - number-controller
+      operationId: getRotateDigits
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/reversenumber:
+    get:
+      tags:
+        - number-controller
+      operationId: getReverseNumber
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/primessmaller:
+    get:
+      tags:
+        - number-controller
+      operationId: getPrimesSmallerThanNumber
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/primefactors:
+    get:
+      tags:
+        - number-controller
+      operationId: getPrimeFactorsOfNumber
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/prime:
+    get:
+      tags:
+        - number-controller
+      operationId: getPrimeOrNot
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/perfectsquare:
+    get:
+      tags:
+        - number-controller
+      operationId: getPerfectSquare
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/palindrome:
+    get:
+      tags:
+        - number-controller
+      operationId: getPalindromeNumber
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/lcm:
+    get:
+      tags:
+        - number-controller
+      operationId: getLCM
+      parameters:
+        - name: a
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: b
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/largestdigit:
+    get:
+      tags:
+        - number-controller
+      operationId: getLargestDigit
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/kthsmallestdigit:
+    get:
+      tags:
+        - number-controller
+      operationId: getKthSmallestDigit
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/kthlargestdigit:
+    get:
+      tags:
+        - number-controller
+      operationId: getKthLargestDigit
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/gpsequence:
+    get:
+      tags:
+        - number-controller
+      operationId: getGpSequence
+      parameters:
+        - name: firstTerm
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: commonratio
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: length
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/gcd:
+    get:
+      tags:
+        - number-controller
+      operationId: getGCD
+      parameters:
+        - name: a
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: b
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/fibonacciseries:
+    get:
+      tags:
+        - number-controller
+      operationId: getFibonacciNumbers
+      parameters:
+        - name: 'n'
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/divisability:
+    get:
+      tags:
+        - number-controller
+      operationId: getDivisabilityOfNumber
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: divider
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/digitatspeceficplace:
+    get:
+      tags:
+        - number-controller
+      operationId: getDigitAtSpeceficPlace
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: pos
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/countofdigits:
+    get:
+      tags:
+        - number-controller
+      operationId: getCountOfDigits
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/circularprime:
+    get:
+      tags:
+        - number-controller
+      operationId: getCircularPrimeOrNot
+      parameters:
+        - name: number
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+  /v1/numbers/apsequence:
+    get:
+      tags:
+        - number-controller
+      operationId: getApSequence
+      parameters:
+        - name: firstTerm
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: commondifference
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+        - name: length
+          in: query
+          required: true
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: string
+components: {}
